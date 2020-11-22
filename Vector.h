@@ -7,22 +7,22 @@ template<typename T>
 class Vector {
 public:
     Vector();
-//    ~Vector();
-//    int getSize(T test);
-//    int getCapacity();
+    ~Vector();
+    int getSize();
+    int getCapacity();
 //    bool isEmpty();
 //    T at(int index);
     void push(T element);
-//    void pop(T element);
+    T pop();
 
 private:
     T *arrayPointer;
-    const int initialCapacity = 2;
+    const int initialCapacity = 1;
     int capacity = initialCapacity;
     int size = 0;
 
-//    void enlarge();
-//    void shrink();
+    void enlarge();
+    void shrink();
 };
 
 #endif //VECTOR_VECTOR_H
