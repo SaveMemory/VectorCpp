@@ -7,24 +7,26 @@ using namespace std;
 int main() {
     cout << "Hello, Vector!" << endl;
 
-    auto *vector = new Vector<int>();
+    unique_ptr<Vector<int>> vectorPointer(new Vector<int>());
 
-    vector->push(1);
-    vector->push(2);
-    vector->push(3);
-    vector->push(4);
-    vector->push(5);
 
-    cout<<vector->getSize()<<endl;
-    cout<<vector->getCapacity()<<endl;
+    vectorPointer->push(1);
+    vectorPointer->push(2);
+    vectorPointer->push(3);
+    vectorPointer->push(4);
+    vectorPointer->push(5);
+    vectorPointer->push(6);
+    vectorPointer->push(7);
 
-    cout<<vector->pop()<<endl;
-    cout<<vector->pop()<<endl;
-    cout<<vector->pop()<<endl;
-    cout<<vector->pop()<<endl;
-    cout<<vector->pop()<<endl;
+    cout << vectorPointer->pop() << endl;
+    cout << vectorPointer->pop() << endl;
+    cout << vectorPointer->pop() << endl;
+    cout << vectorPointer->pop() << endl;
+    cout << vectorPointer->pop() << endl;
+    cout << vectorPointer->pop() << endl;
+    cout << vectorPointer->pop() << endl;
 
-    vector->~Vector<int>();
+
 
     return 0;
 }
