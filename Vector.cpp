@@ -57,13 +57,12 @@ T Vector<T>::at(int index) {
 
 template <typename T>
 void Vector<T>::deleteItem(int index) {
-    arrayPointer.get()[size - 1] = NULL;
+    arrayPointer.get()[index] = NULL;
 
-    for (int i = size; i < capacity; ++i) {
+    for (int i = index; i < capacity; ++i) {
         arrayPointer.get()[i-1] = arrayPointer.get()[i];
     }
 }
-
 
 template <typename T>
 void Vector<T>::enlarge() {
