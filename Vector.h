@@ -1,6 +1,7 @@
 #ifndef VECTOR_VECTOR_H
 #define VECTOR_VECTOR_H
 #include <memory>
+
 using namespace std;
 
 template<typename T>
